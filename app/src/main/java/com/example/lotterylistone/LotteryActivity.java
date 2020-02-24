@@ -34,7 +34,10 @@ public class LotteryActivity extends AppCompatActivity {
 
         // Populate the lottery image
         ivPhoto = findViewById(R.id.ivPhoto);
+        // Sets a drawable as the content of this ImageView.
         ivPhoto.setImageResource(lottery.getImageResourceId());
+        //  Allows you to associate a textual description to the view.
+        //  The docs state that it's primarily used to support accessibility,
         ivPhoto.setContentDescription(lottery.getName());
     }
 }

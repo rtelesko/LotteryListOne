@@ -18,6 +18,13 @@ public class LotteryCategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lottery_category);
+        /* context: The first parameter is used to pass the context, this means the reference of the current class.
+        Here "this" is a keyword used to show the current class reference. We can also use getApplicationContext(),
+        getActivity() in the place of this keyword.
+        resource: The second parameter is resource id used to set the layout(xml-File) for list items in which you have
+        a text view.
+        objects: The objects to represent in the ListView. This value must never be null.
+        */
         ArrayAdapter<Lottery> listAdapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, Lottery.lotteries);
         lvLottery = findViewById(R.id.lvLottery);

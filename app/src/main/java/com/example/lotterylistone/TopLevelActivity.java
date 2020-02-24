@@ -21,6 +21,15 @@ public class TopLevelActivity extends AppCompatActivity {
         AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener() {
                     @Override
+                    /*
+                    AdapterView: The AdapterView where the click happened.
+                    View: The view within the AdapterView that was clicked (this will be a view provided by the adapter)
+                    position: The position of the view in the list
+                    id: The row id of the item that was clicked
+                    A position starts from 0, top to bottom of the ListView, whereas to get a proper row id it is important that the cursor,
+                    which was passed to the adapter, contains a column called '_id' representing unique id for each row in the table.
+                    If you are using an ArrayAdapter, position and id become the same.
+                     */
                     public void onItemClick(AdapterView<?> lvOptions,
                                             View itemView,
                                             int position,
